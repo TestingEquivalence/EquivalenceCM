@@ -12,3 +12,4 @@ testStatisticCM<-function(U){
   w=sum(v)+1/(12*n)
   return(w/n)
 }
+
