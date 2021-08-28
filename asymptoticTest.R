@@ -17,3 +17,14 @@ asymptoticVariance<-function(U){
   return(4*r)
 }
 
+asymptoticTest<-function(parameter){
+  #calculate asymptotic min eps
+  U=uTransform(parameter$x, parameter$F)
+  n=length(parameter$x)
+  vol = asymptoticVariance(U)/sqrt(n)
+  qt=qnorm(1-parameter$alpha,0,1)
+  
+  distance=testStatisticCM(U)
+  min_eps = distance + qt*vol
+  return(min_eps)
+}
