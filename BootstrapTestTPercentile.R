@@ -1,23 +1,21 @@
-tPercentileBootstrapTest<-function(mdr,nSimulation){
+tPercentileBootstrapTest<-function(parameter){
+  U=uTransform(parameter$x, parameter$F)
+  dst=testStatisticCM(U)
+  stDev=sqrt(asymptoticVariance(U))
+  
   #calculate bootstrap distribution
-  y=all.vars(as.formula(mdr$frm))[1]
-  p=mdr$data[[y]]
-  n=mdr$weights
-  
-  mdr$test=none
-  res=rep(NA,nSimulation)
-  stDev=asymptStDev(mdr)
-  
-  for (i in c(1:nSimulation)){
-    np=resample.p(n,p)
-    nmdr=updateMinDistanceModel(p=np,mdr)
-    nStDev=asymptStDev(nmdr)
-    res[i]=(nmdr$min.distance^2-mdr$min.distance^2)/nStDev
+  t.fun<-function(dat,ind){
+    x=dat[ind]
+    x=sort(x)
+    dstBst=testStatisticCM(x)
+    stDevBst=sqrt(asymptoticVariance(x))
+    return((dstBst-dst)/stDevBst)
   }
   
+  res=boot(U,t.fun,R=parameter$nSimulation)
+  
   #calculate quantile of bootstrap distribution
-  qt=quantile(res,mdr$alpha,type=1)
-  min_eps=mdr$min.distance^2-stDev*qt
-  if (min_eps<0) {return(0)}
-  return(sqrt(min_eps))
+  qt=quantile(res$t,parameter$alpha,type=1)
+  min_eps=dst-stDev*qt
+  return(min_eps)
 }

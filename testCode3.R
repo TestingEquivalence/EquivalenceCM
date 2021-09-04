@@ -2,6 +2,7 @@ source("testStatistic.R")
 source("asymptoticTest.R")
 source("asymptoticTestBootstrapVariance.R")
 source("empiricalBootstrapTest.R")
+source("BootstrapTestTPercentile.R")
 
 set.seed(18032021)
 n=100
@@ -21,3 +22,4 @@ asymptoticTest(parameter)
 
 asymptoticTestBootstrapVariance(parameter)
 empiricalBootstrapTest(parameter)
+tPercentileBootstrapTest(parameter)
