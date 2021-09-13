@@ -11,6 +11,7 @@ simulatePowerAtUniform<-function(test, parameter, nSimulation){
   for (i in c(1:nSimulation)){
     parameter$x=sim[[i]]
     res[i]=test(parameter)
+    print(i)
   }
 
   return(res)
