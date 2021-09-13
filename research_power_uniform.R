@@ -2,6 +2,8 @@ source("testStatistic.R")
 source("asymptoticTest.R")
 source("power.R")
 source("asymptoticTestBootstrapVariance.R")
+source("empiricalBootstrapTest.R")
+source("BootstrapTestTPercentile.R")
 
 H<-function(x){
   x
@@ -22,10 +24,10 @@ rDistribution<-function(n){
 parameter=list()
 parameter$F=H
 parameter$alpha=0.05
-parameter$n=100
+parameter$n=500
 parameter$nSimulation=1000
 
 nSimulation=10000
 
-res=simulatePower(asymptoticTestBootstrapVariance, parameter, 10000, rDistribution)
+res=simulatePower(empiricalBootstrapTest, parameter, 10000, rDistribution)
 write.csv(res,"power.csv")
