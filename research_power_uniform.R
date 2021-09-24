@@ -10,7 +10,7 @@ H<-function(x){
 }
 
 G<-function(x){
-  pbeta(x,0.5,0.5)
+  pbeta(x,0.5,1.0)
 }
 
 dst=theoreticCMDistance(H,G)
@@ -18,7 +18,7 @@ dst$value
 dst
 
 rDistribution<-function(n){
-  rbeta(n,0.5,0.5)
+  rbeta(n,0.5,1.0)
 }
 
 parameter=list()
@@ -29,5 +29,5 @@ parameter$nSimulation=1000
 
 nSimulation=10000
 
-res=simulatePower(empiricalBootstrapTest, parameter, 10000, rDistribution)
-write.csv(res,"power.csv")
+res=simulatePower(asymptoticTest, parameter, nSimulation, rDistribution)
+write.csv(res,"power_at_500.csv")

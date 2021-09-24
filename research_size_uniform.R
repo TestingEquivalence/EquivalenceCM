@@ -12,7 +12,7 @@ F<-function(x){
 parameter=list()
 parameter$F=F
 parameter$alpha=0.05
-parameter$n=200 
+parameter$n=50 
 parameter$nSimulation=1000
 
 nSimulation=10000
