@@ -24,10 +24,10 @@ rDistribution<-function(n){
 parameter=list()
 parameter$F=H
 parameter$alpha=0.05
-parameter$n=500
+parameter$n=1000
 parameter$nSimulation=1000
 
 nSimulation=10000
 
-res=simulatePower(asymptoticTest, parameter, nSimulation, rDistribution)
-write.csv(res,"power_at_500.csv")
+res=simulatePower(empiricalBootstrapTest, parameter, nSimulation, rDistribution)
+write.csv(res,"power_eb_1000.csv")

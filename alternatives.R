@@ -2,6 +2,8 @@
 # Stephens, M.A., 1974. EDF statistics for goodness of fit and some comparisons. 
 # Journal of the American Statistical Association 69, 730737.
 
+# Distribution A_k
+
 dA<-function(x, k){
   return(k*((1-x)^(k-1)))
 }
@@ -18,4 +20,47 @@ rA<-function(n,k){
   v=runif(n)
   r=sapply(v, qA,k)
   return(r)
+}
+
+# Distribution B_k
+
+pB<-function(x,k){
+  if (x<=0.5){
+    r=2^(k-1)
+    r=r*(x^k)
+    return(r)
+  }
+  else{
+    r=2^(k-1)
+    r=r*((1-x)^k)
+    return(1-r)
+  }
+}
+
+dB<-function(x,k){
+  if (x<=0.5){
+    r=2^(k-1)
+    r=r*k
+    r=r*(x^(k-1))
+    return(r)
+  }
+  else{
+    r=2^(k-1)
+    r=r*k
+    r=r*((1-x)^(k-1))
+    return(r)
+  }
+}
+
+qB<-function(x,k){
+  if (x<=0.5){
+    r=2^((1-k)/k)
+    r=r*(x^(1/k))
+    return(r)
+  }
+  else{
+    r=2^((1-k)/k)
+    r=r*((1-x)^(1/k))
+    return(1-r)
+  }
 }
