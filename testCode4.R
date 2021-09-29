@@ -28,3 +28,23 @@ integrate(f,0,1)
 qB(x1,k)
 qB(x2,k)
 qB(x3,k)
+
+v=rB(10,2)
+
+#test C
+k=0.1
+x1=pC(0.1,k)
+x2=pC(0.5,k)
+x3=pC(0.9,k)
+
+f<-function(x){
+  r=sapply(x, dC, k)
+}
+
+integrate(f,0,1)
+
+qC(x1,k)
+qC(x2,k)
+qC(x3,k)
+
+v=rC(10,2)

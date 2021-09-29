@@ -64,3 +64,56 @@ qB<-function(x,k){
     return(1-r)
   }
 }
+
+rB<-function(n,k){
+  v=runif(n)
+  r=sapply(v, qB,k)
+  return(r)
+}
+
+# Distribution C_k
+
+pC<-function(x,k){
+  if (x<=0.5){
+    r=2^(k-1)
+    r=r*((0.5-x)^k)
+    return(0.5-r)
+  }
+  else{
+    r=2^(k-1)
+    r=r*((x-0.5)^k)
+    return(0.5+r)
+  }
+}
+
+dC<-function(x,k){
+  if (x<=0.5){
+    r=2^(k-1)
+    r=r*((0.5-x)^(k-1))
+    return(k*r)
+  }
+  else{
+    r=2^(k-1)
+    r=r*((x-0.5)^(k-1))
+    return(k*r)
+  }
+}
+
+qC<-function(x,k){
+  if (x<=0.5){
+    r=2^((1-k)/k)
+    r=r*((0.5-x)^(1/k))
+    return(0.5-r)
+  }
+  else{
+    r=2^((1-k)/k)
+    r=r*((x-0.5)^(1/k))
+    return(0.5+r)
+  }
+}
+
+rC<-function(n,k){
+  v=runif(n)
+  r=sapply(v, qC,k)
+  return(r)
+}
