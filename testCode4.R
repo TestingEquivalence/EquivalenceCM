@@ -32,7 +32,7 @@ qB(x3,k)
 v=rB(10,2)
 
 #test C
-k=0.1
+k=3
 x1=pC(0.1,k)
 x2=pC(0.5,k)
 x3=pC(0.9,k)

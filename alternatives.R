@@ -1,4 +1,4 @@
-# The alternatives are from the article
+# The alternative distributions are from the article:
 # Stephens, M.A., 1974. EDF statistics for goodness of fit and some comparisons. 
 # Journal of the American Statistical Association 69, 730737.
 
