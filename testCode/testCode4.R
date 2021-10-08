@@ -48,3 +48,28 @@ qC(x2,k)
 qC(x3,k)
 
 v=rC(10,2)
+
+# test mixed distribution
+H<-function(x){
+  x
+}
+
+
+G<-function(x){
+  pbeta(x,0.5,1.5)
+}
+
+rF=runif
+rG<-function(n){
+  rbeta(n,0.5,1.5)
+}
+
+rv=rMixed(5,0.5,rF,rG)
+
+w=boundaryPoint(0.05, G)
+
+mixedF<-function(x){
+  pMixed(x,w,H,G)
+}
+
+theoreticCMDistance(H,mixedF)

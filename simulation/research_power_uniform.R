@@ -30,7 +30,7 @@ for (n in c(50,100,200,500,1000)){
   
   nSimulation=1000
   
-  res=simulatePower(asymptoticTest, parameter, nSimulation, rDistribution)
-  fn=paste0("power_as_",parameter$n,".csv")
+  res=simulatePower(asymptoticTestBootstrapVariance, parameter, nSimulation, rDistribution)
+  fn=paste0("power_ab_",parameter$n,".csv")
   write.csv(res,fn)
 }
