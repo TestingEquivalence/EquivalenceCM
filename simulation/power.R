@@ -23,3 +23,117 @@ theoreticCMDistance<-function(H,G){
   integrate(ff,0,1)
 }
 
+listCDF<-function(){
+  ls=list()
+  
+  ls[[1]]<-function(x){
+    pbeta(x,0.5,0.5)
+  } 
+  
+  ls[[2]]<-function(x){
+    pbeta(x,0.5,1)
+  } 
+  
+  ls[[3]]<-function(x){
+    pbeta(x,0.5,1.5)
+  } 
+  
+  ls[[4]]<-function(x){
+    pbeta(x,0.5,2)
+  } 
+  
+  ls[[5]]<-function(x){
+    pbeta(x,1,1.5)
+  } 
+  
+  ls[[6]]<-function(x){
+    pbeta(x,1,2)
+  } 
+  
+  ls[[7]]<-function(x){
+    pbeta(x,1.5,1.5)
+  } 
+  
+  ls[[8]]<-function(x){
+    pbeta(x,1.5,2)
+  } 
+  
+  ls[[9]]<-function(x){
+    pbeta(x,2,2)
+  } 
+  
+  ls[[10]]<-function(x){
+    pA(x,0.25)
+  }
+  
+  ls[[11]]<-function(x){
+    pA(x,0.5)
+  }
+  
+  ls[[12]]<-function(x){
+    pA(x,1.5)
+  }
+  
+  ls[[13]]<-function(x){
+    pA(x,2)
+  }
+  
+  ls[[14]]<-function(x){
+    pA(x,2.5)
+  }
+  
+  ls[[15]]<-function(x){
+    pA(x,3)
+  }
+  
+  ls[[16]]<-function(x){
+    pB(x,0.25)
+  }
+  
+  ls[[17]]<-function(x){
+    pB(x,0.5)
+  }
+  
+  ls[[18]]<-function(x){
+    pB(x,1.5)
+  }
+  
+  ls[[19]]<-function(x){
+    pB(x,2)
+  }
+  
+  ls[[20]]<-function(x){
+    pB(x,2.5)
+  }
+  
+  ls[[21]]<-function(x){
+    pB(x,3)
+  }
+  
+  ls[[22]]<-function(x){
+    pC(x,0.25)
+  }
+  
+  ls[[23]]<-function(x){
+    pC(x,0.5)
+  }
+  
+  ls[[24]]<-function(x){
+    pC(x,1.5)
+  }
+  
+  ls[[25]]<-function(x){
+    pC(x,2)
+  }
+  
+  ls[[26]]<-function(x){
+    pC(x,2.5)
+  }
+  
+  ls[[27]]<-function(x){
+    pC(x,3)
+  }
+  return(ls)
+}
+
+
