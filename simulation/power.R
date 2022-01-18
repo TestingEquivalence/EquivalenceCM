@@ -18,7 +18,10 @@ simulatePower<-function(test, parameter, nSimulation,rDistribution){
 }
 theoreticCMDistance<-function(H,G){
   ff<-function(x){
-    (H(x)-G(x))^2
+    f<-function(s){
+      (H(s)-G(s))^2  
+    }
+    return(sapply(x, f))
   }
   integrate(ff,0,1)
 }
