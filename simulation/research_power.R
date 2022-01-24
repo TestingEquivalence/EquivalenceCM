@@ -6,7 +6,7 @@ source("empiricalBootstrapTest.R")
 source("BootstrapTestTPercentile.R")
 source("distributions/alternatives.R")
 
-pointNr=28
+pointNr=9
 lsCDF=listCDF()
 lsR=listRDG()
 
@@ -26,6 +26,7 @@ rDistribution<-function(n){
   lsR[[pointNr]](n)
 }
 
+
 for (n in c(50,100,200,500,1000)){
   parameter=list()
   parameter$F=H
@@ -35,8 +36,8 @@ for (n in c(50,100,200,500,1000)){
   
   nSimulation=1000
   
-  res=simulatePower(asymptoticTest, parameter, nSimulation, rDistribution)
-  fn=paste0("power_AT_",pointNr,"_n_",parameter$n,".csv")
+  res=simulatePower(empiricalBootstrapTest, parameter, nSimulation, rDistribution)
+  fn=paste0("power_EB_",pointNr,"_n_",parameter$n,".csv")
   write.csv(res,fn)
 }
  

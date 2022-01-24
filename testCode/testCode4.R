@@ -1,4 +1,5 @@
-source("alternatives.R")
+source("distributions/alternatives.R")
+source("distributions/mixedDistribution.R")
 
 # test A
 
