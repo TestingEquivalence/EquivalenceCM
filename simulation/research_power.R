@@ -6,7 +6,7 @@ source("empiricalBootstrapTest.R")
 source("BootstrapTestTPercentile.R")
 source("distributions/alternatives.R")
 
-pointNr=9
+pointNr=27
 lsCDF=listCDF()
 lsR=listRDG()
 
