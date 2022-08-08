@@ -15,3 +15,6 @@ The equivalence test is a powerful tool to show that observed data are sufficien
 
 Keywords: 
 testing equivalence; Cramér-von Mises distance; equivalence test; neighborhood-of-model validation
+
+How to start:
+start with examples in example.R
