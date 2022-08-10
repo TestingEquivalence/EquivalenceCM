@@ -5,8 +5,12 @@ On Application of the Cramér-von Mises Distance for Equivalence Testing
 Journal of Statistics and Computer Science
 Vol. 1, No. 1, 2022, pp. 1-9
 © ARF India. All Right Reserved
-URL : https://www.arfjournals.com/jscs/issue/163
+open acces to article under:
+URL : https://www.arfjournals.com/jscs
 https://DOI: 10.47509 /JSCS.2022.v01i01.01
+
+A preprint is available under:
+https://www.researchgate.net/publication/362546448_On_Application_of_the_Cramer-von_Mises_Distance_for_Equivalence_Testing
 
 
 Abstract: 
@@ -18,3 +22,24 @@ testing equivalence; Cramér-von Mises distance; equivalence test; neighborhood-
 
 How to start:
 start with examples in example.R
+
+Introduction:
+Let G be CDF (cumulative density function) of some distribution on the real line.
+We observe a sample of n independent identically distributed random numbers, which true underlying CDF is F. 
+
+Let d(F,G) denote the well known Cramer-von Mises distance ( integral (F-G)^2 dG).
+Then the equivalence test problem is defined by
+H0={d(F,G)>epsilon} versus H1={d(F,G)<=epsilon}
+for the tolerance parameter epsilon>0.
+
+If the hypothesis H0 can be rejected based on the observed data only for 
+a sufficiently small value of epsilon, then the true 
+underlying distribution F is close to the given distribution G. 
+
+This code provides a significance test for the equivalence tests problem,
+called  equivalence test. Three variants of the equivalence test are given:
+- asymptotic test, where the critical value
+
+
+
+
