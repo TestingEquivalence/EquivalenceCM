@@ -38,7 +38,10 @@ underlying distribution F is close to the given distribution G.
 
 This code provides a significance test for the equivalence tests problem,
 called  equivalence test. Three variants of the equivalence test are given:
-- asymptotic test, where the critical value
+- asymptotic test, where the critical value is computed using the asymptotic approximation;
+- asymptotic test where the variance of the test statistic is estimated by bootstrap;
+- percentile-t bootstrap test, whre the critical value is computed by percentile-t bootstrap method.
+
 
 
 
