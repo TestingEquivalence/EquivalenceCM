@@ -35,12 +35,13 @@ tPercentileBootstrapTest(parameter) # t-percentile  bootstrap test. It takes a b
 
 # Next we apply the equivalence test to an alternative distribution.
 # We consider the beta(p,q) distribution.
-# You can vary the parameters of the beta distribution to get different results.
-# The Cramer-von Mises between uniform distribution and beta(p, q) is
+# You can vary the parameters p and q of the beta distribution to get different results.
 
 # Parameters of the beta distribution:
 p=0.5
 q=0.5
+
+# The Cramer-von Mises between uniform distribution and beta(p, q) is:
 
 Q<-function(x){
   pbeta(x,p,q)
