@@ -7,7 +7,6 @@ Vol. 1, No. 1, 2022, pp. 1-9
 © ARF India. All Right Reserved
 open acces to article under:
 URL : https://www.arfjournals.com/jscs
-https://DOI: 10.47509 /JSCS.2022.v01i01.01
 
 A preprint is available under:
 https://www.researchgate.net/publication/362546448_On_Application_of_the_Cramer-von_Mises_Distance_for_Equivalence_Testing
