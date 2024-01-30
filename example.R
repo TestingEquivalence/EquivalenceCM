@@ -41,7 +41,7 @@ tPercentileBootstrapTest(parameter) # t-percentile  bootstrap test. It takes a b
 p=0.5
 q=0.5
 
-# The Cramer-von Mises between uniform distribution and beta(p, q) is:
+# The Cramer-von Mises distance between uniform distribution and beta(p, q) is:
 
 Q<-function(x){
   pbeta(x,p,q)
